@@ -1,3 +1,4 @@
+direction distance
 down 1
 forward 19
 up 1
