@@ -3,8 +3,9 @@ VERTICAL_DIRECTIONS = {
     "down": 1
 }
 
-def calculate_coordinate_diff(direction, distance):
+def calculate_coordinate_diff(direction, distance, current_aim):
     if direction in VERTICAL_DIRECTIONS.keys():
-        return (0, VERTICAL_DIRECTIONS[direction] * distance)
+        return (0, 0, VERTICAL_DIRECTIONS[direction] * distance)
     else:
-        return (distance, 0)
+        return (distance, current_aim * distance, 0)
+    
